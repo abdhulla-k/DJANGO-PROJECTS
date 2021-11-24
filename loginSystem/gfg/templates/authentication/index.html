@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication</title>
 </head>
-<body background>
+<body>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
     <h3>Welcome to Basic Website</h3>
+    {% if user.is_authenticated %}
+    <h3>Hello {{ fname }}</h3>
+    <h3>You'r successfully loged in</h3>
+    <button type="submit"><a href="/signout">SignOut</a></button>
+    {% else %}
     <button type="submit"><a href="/signup">SignUp</a></button>
     <button type="submit"><a href="/signin">SignIn</a></button>
-    <button type="submit"><a href="/signout">SignOut</a></button>
+    {% endif %}
+   
 </body>
 </html>
