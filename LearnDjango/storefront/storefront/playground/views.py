@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Item
 
 # Create your views here.
 
@@ -8,4 +9,5 @@ def Home(request):
 
 def SayHello(request):
    # return HttpResponse('Hello world')
-   return render(request , 'hello.html', {'name':'Abdhu'})
+   data = Item.objects.all()
+   return HttpResponse(request,data)
