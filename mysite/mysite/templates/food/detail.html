@@ -7,13 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello! welcome to food app</h1>
-    {% for i in data %}
-    <ul>
-        <li>
-            <h2>{{ i.id }} <a href="{{ i.id }}">{{ i.item_name }}</a></h2>
-        </li>
-    </ul>
-    {% endfor %}
+    <h1>{{ item.item_name }}</h1>
+    <h2>{{ item.item_disc }}</h2>
+    <h3>price : {{ item.item_price }}</h3>
 </body>
 </html>
