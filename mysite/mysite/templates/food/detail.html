@@ -9,10 +9,23 @@
 </head>
 <body>
     {% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="card" height="300px" src="{{ item.item_image }}"/>
+            </div>
+            <div class="col-md-6">
+                <h1>{{ item.item_name }}</h1>
+                <h2>{{ item.item_disc }}</h2>
+                <h3>price : {{ item.item_price }}</h3>
+            </div>
+        </div>
+    </div>
     
-    <h1>{{ item.item_name }}</h1>
+    <!-- <h1>{{ item.item_name }}</h1>
     <h2>{{ item.item_disc }}</h2>
-    <h3>price : {{ item.item_price }}</h3>
+    <h3>price : {{ item.item_price }}</h3> -->
 
     {% endblock %}
 </body>

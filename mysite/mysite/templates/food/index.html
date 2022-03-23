@@ -34,13 +34,26 @@
 
     {% block body %}
 
-    <h5 style="color: blue;">Products</h5>
     {% for i in data %}
-    <ul>
+    <!--<ul>
         <li>
             <h6>{{ i.id }} <a href="{{ i.id }}">{{ i.item_name }}</a></h6>
         </li>
-    </ul>
+    </ul>-->
+
+    <div class="row">
+        <div class="col-md-3 offset-md-2">
+            <img class="card" height="150px" src="{{ i.item_image }}"/>
+        </div>
+        <div class="col-md-4">
+            <h3>{{ i.item_name }}</h3>
+            <h5>{{ i.item_disc }}</h5>
+            <h6>{{ i.item_price }}</h6>
+        </div>
+        <div class="col-md-2">
+            <a href="{{ i.id }}" class="btn btn-success">Details</a>
+        </div>
+    </div>
     {% endfor %}
 
     {% endblock %}
