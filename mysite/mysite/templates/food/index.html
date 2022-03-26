@@ -52,7 +52,9 @@
         </div>
         <div class="col-md-2">
             <a href="{{ i.id }}" class="btn btn-success">Details</a>
-            <a href="update/{{ i.id }}" class="btn btn-success">Edit</a>
+            <!-- <a href="update/{{ i.id }}" class="btn btn-success">Edit</a> 
+            changed hardcoded url-->
+            <a href="{% url 'update_item' i.id %}" class="btn btn-success">Edit</a>
         </div>
     </div>
     {% endfor %}
