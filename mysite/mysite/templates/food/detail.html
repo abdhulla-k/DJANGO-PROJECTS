@@ -21,7 +21,7 @@
                 <h3>price : {{ item.item_price }}</h3>
                 <!-- <a href="/delete/{{ item.id }}" class="btn btn-danger">Delete</a>
                 we are changeing hardcoded url to shows below -->
-                <a href="{% url 'food:delete_item' item.id %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'delete_item' item.id %}" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
