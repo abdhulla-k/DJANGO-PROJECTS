@@ -18,6 +18,7 @@
             <!-- Check is the current user is login or logout and add the features to nav bar -->
             {% if user.is_authenticated %}
                <a style="text-decoration: none;" href="{% url 'logout' %}">Logout</a>
+               <a style="text-decoration: none;" href="{% url 'profilepage' %}">Profile</a>
             {% else %}
                <a style="text-decoration: none;" href="{% url 'login' %}">Login</a>
             {% endif %}
